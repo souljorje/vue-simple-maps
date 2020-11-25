@@ -16,7 +16,9 @@
     "d3-geo-projection": "^3.0.0",
     "d3-selection": "^2.0.0",
     "d3-zoom": "^2.0.0",
-    "topojson-client": "^3.1.0"
+    "topojson-client": "^3.1.0",
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-code-copy": "^1.0.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.8",
@@ -29,9 +31,7 @@
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.1.0",
     "lint-staged": "^9.5.0",
-    "vue-template-compiler": "^2.6.11",
-    "vuepress": "^1.7.1",
-    "vuepress-plugin-code-copy": "^1.0.6"
+    "vue-template-compiler": "^2.6.11"
   },
   "peerDependencies": {
     "vue": "^2.6.12"
