@@ -2,13 +2,7 @@
 
 ## Project setup
 ```
-yarn install
-```
-
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+yarn
 
 ### Compiles and minifies for production
 ```
@@ -23,7 +17,6 @@ yarn test:unit
 ### Lints and fixes files
 ```
 yarn lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+### License
+MIT licensed. Copyright © 2020 Georgiy Bukharov. See [LICENSE](./LICENSE) for more details.
