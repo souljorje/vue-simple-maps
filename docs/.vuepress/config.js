@@ -53,36 +53,41 @@ module.exports = {
         link: '/guide/',
       },
       {
-        text: 'Examples',
-        link: '/examples/',
-      },
-      {
         text: 'API',
         link: '/api/',
       },
+      {
+        text: 'Examples',
+        link: '/examples/',
+      },
     ],
-    sidebar: {
-      '/guide/': [
-        {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-          ],
-        },
-      ],
-      '/examples/': [
-        {
-          title: 'Examples',
-          collapsable: false,
-          children: [
-            'simple-usage',
-            'markers',
-            'zoom-and-drag',
-          ],
-        },
-      ],
-    },
+    sidebar: [
+      {
+        title: 'Guide',
+        collapsable: false,
+        children: [
+          '/guide/',
+          '/guide/getting-started',
+        ],
+      },
+      {
+        title: 'API',
+        collapsable: false,
+        children: [
+          '/api/',
+        ],
+      },
+      {
+        title: 'Examples',
+        collapsable: false,
+        children: [
+          '/examples/',
+          '/examples/markers',
+          '/examples/zoom-and-drag',
+          '/examples/projections-and-maps',
+        ],
+      },
+    ],
   },
 
   /**
@@ -95,6 +100,7 @@ module.exports = {
   ],
 
   alias: {
+    '#': path.resolve(process.cwd()),
     '@': path.resolve(process.cwd(), 'src'),
   },
 };

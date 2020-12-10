@@ -1,5 +1,8 @@
 <template>
-  <Map :data="worldMap">
+  <Map
+    :data="worldMap"
+    :projection="projection"
+  >
     <MapZoom @zoomend="updateMarkerScale">
       <MapFeatures />
       <MapMarker
@@ -14,7 +17,7 @@
             text-anchor="middle"
           >{{ item.city }}</text>
           <circle
-            fill="red"
+            fill="#3eaf7c"
             r="3"
           />
         </g>
@@ -24,7 +27,7 @@
 </template>
 
 <script>
-import worldMap from '@/maps/world-countries-sans-antarctica.json';
+import { geoMiller } from 'd3-geo-projection';
 
 const cities = [{
   city: 'Minsk',
@@ -43,9 +46,9 @@ const cities = [{
   lon: -90.31,
   lat: 14.37,
 }, {
-  city: 'Malabo',
-  lon: 8.47,
-  lat: 3.45,
+  city: 'Njamena',
+  lon: 12.1348,
+  lat: 15.0557,
 }, {
   city: 'Tokyo',
   lon: 139.45,
@@ -58,11 +61,17 @@ const cities = [{
 
 export default {
   data: () => ({
-    worldMap,
+    worldMap: undefined,
+    projection: geoMiller,
     cities,
     markerScale: 1,
     currentZoom: 1,
   }),
+  mounted() {
+    fetch('https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries-sans-antarctica.json')
+      .then((r) => r.json())
+      .then((d) => this.worldMap = d);
+  },
   methods: {
     updateMarkerScale(e) {
       if (this.currentZoom === e.transform.k) return;

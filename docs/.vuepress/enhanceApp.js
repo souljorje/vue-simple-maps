@@ -4,7 +4,7 @@
  * https://v1.vuepress.vuejs.org/guide/basic-config.html#app-level-enhancements
  */
 
-import VueSimpleMaps from '../../src/main';
+import VueSimpleMaps from '@/main';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app

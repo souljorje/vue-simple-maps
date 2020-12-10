@@ -1,5 +1,8 @@
 <template>
-  <Map :data="worldMap">
+  <Map
+    :data="worldMap"
+    :projection="projection"
+  >
     <MapFeatures />
     <MapMarker
       v-for="(item, index) in cities"
@@ -12,7 +15,7 @@
         text-anchor="middle"
       >{{ item.city }}</text>
       <circle
-        fill="red"
+        fill="#3eaf7c"
         r="3"
       />
     </MapMarker>
@@ -20,7 +23,7 @@
 </template>
 
 <script>
-import worldMap from '@/maps/world-countries-sans-antarctica.json';
+import { geoMiller } from 'd3-geo-projection';
 
 const cities = [{
   city: 'Minsk',
@@ -35,9 +38,9 @@ const cities = [{
   lon: 68.48,
   lat: 38.35,
 }, {
-  city: 'Guatemala City',
-  lon: -90.31,
-  lat: 14.37,
+  city: 'Njamena',
+  lon: 12.1348,
+  lat: 15.0557,
 }, {
   city: 'Malabo',
   lon: 8.47,
@@ -54,8 +57,14 @@ const cities = [{
 
 export default {
   data: () => ({
-    worldMap,
+    worldMap: undefined,
+    projection: geoMiller,
     cities,
   }),
+  mounted() {
+    fetch('https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries-sans-antarctica.json')
+      .then((r) => r.json())
+      .then((d) => this.worldMap = d);
+  },
 };
 </script>
