@@ -15,7 +15,6 @@
 <script>
 import { isNumber } from '@/utils';
 import { geoPath } from 'd3-geo';
-import { geoMiller } from 'd3-geo-projection';
 import { feature } from 'topojson-client';
 import { MapProvider } from './MapContext';
 
@@ -26,10 +25,10 @@ const defaultProjectionConfig = {
 };
 
 const makeProjection = ({
-  width = 800,
-  height = 600,
+  width,
+  height,
   config = defaultProjectionConfig,
-  projection = geoMiller,
+  projection,
   geoJson,
 }) => {
   const [cx, cy] = config.center;
@@ -51,6 +50,7 @@ const makeProjection = ({
 
   Object.entries(projectionConfig).forEach(([modifier, arg]) => {
     if (!modifier) return;
+    if (!mapProjection[modifier]) return;
     mapProjection[modifier](...(arg || [mapProjection[modifier]()]));
   });
 
@@ -58,6 +58,7 @@ const makeProjection = ({
 };
 
 function getFeatures(geoData, parser) {
+  if (!geoData) return undefined;
   // already geoJson
   if (Array.isArray(geoData)) {
     return parser ? parser(geoData) : geoData;
@@ -103,7 +104,7 @@ export default {
   },
   computed: {
     parsedData() {
-      return getFeatures(this.data, this.parser);
+      return getFeatures(this.data, this.parser) || {};
     },
     mapProjection() {
       const {

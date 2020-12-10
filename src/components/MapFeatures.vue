@@ -3,8 +3,8 @@
     <g>
       <slot :features="features">
         <MapFeature
-          v-for="feature in features"
-          :key="feature[idKey]"
+          v-for="(feature, index) in features"
+          :key="feature[idKey] || index"
           :data="feature"
           :fill="fill"
           :stroke="stroke"
