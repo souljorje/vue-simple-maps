@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { isNumber } from '@/utils';
+import { isNumber } from '../utils';
 import { geoPath } from 'd3-geo';
 import { feature } from 'topojson-client';
 import { MapProvider } from './MapContext';
