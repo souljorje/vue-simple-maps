@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-maps",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "private": false,
   "main": "dist/vue-simple-maps.umd.min.js",
   "unpkg": "dist/vue-simple-maps.umd.min.js",
@@ -23,7 +23,7 @@
   },
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-simple-maps src/main.js",
+    "build": "vue-cli-service build --target lib --name vue-simple-maps ./src/main.js",
     "prepublishOnly": "$npm_execpath run build",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint",
