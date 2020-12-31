@@ -1,6 +1,6 @@
 {
   "name": "vue-simple-maps",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": false,
   "main": "dist/vue-simple-maps.umd.min.js",
   "unpkg": "dist/vue-simple-maps.umd.min.js",

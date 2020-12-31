@@ -20,6 +20,7 @@
     "d3-geo": "^2.0.1",
     "d3-geo-projection": "^3.0.0",
     "d3-scale": "^3.2.3",
+    "vue-simple-maps": "^1.0.0",
     "vuepress": "^1.7.1",
     "vuepress-plugin-code-copy": "^1.0.6"
   }
