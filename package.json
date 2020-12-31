@@ -5,7 +5,7 @@
   "scripts": {},
   "workspaces": ["packages/*"],
   "engines": {
-    "yarn": ">=1.17.0 <1.19.0",
+    "yarn": ">=1.17.0 <2",
     "node": ">=10.0.0 <13"
   }
 }
