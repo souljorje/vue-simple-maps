@@ -46,7 +46,7 @@ plugins: ['~/plugins/vue-simple-maps.js']
 
 ### 2. Create component
 
-You can use any TopoJSON/GeoJSON and projection. Find TopoJSON files in [this repo](https://github.com/deldersveld/TopoJSON), see projections in [examples](/examples/projections).
+You can use any TopoJSON/GeoJSON and projection. Find TopoJSON files in [this repo](https://github.com/deldersveld/TopoJSON).
 
 <SourceCode>
   <<< @/src/.vuepress/components/examples/simple.vue

@@ -90,7 +90,7 @@ module.exports = {
           '/examples/',
           '/examples/markers',
           '/examples/zoom-and-drag',
-          '/examples/projections-and-maps',
+          // '/examples/projections-and-maps',
           '/examples/choroplet-map',
           '/examples/bubble-map',
         ],
