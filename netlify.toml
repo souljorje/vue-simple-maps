@@ -13,7 +13,7 @@
 
   publish = "packages/docs/dist"
 
-  ignore = "git diff --quiet HEAD^ HEAD packages/vue-simple-maps/"
+  # ignore = "git diff --quiet HEAD^ HEAD packages/vue-simple-maps/"
 
 [build.environment]
   NODE_ENV = "production"
