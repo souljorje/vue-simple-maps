@@ -47,7 +47,7 @@ import VueSimpleMaps from 'vue-simple-maps';
 Vue.use(VueSimpleMaps);
 ```
 
-*Nuxt.js* \
+Nuxt.js \
 Put previouse 👆 code into ~/plugins/vue-simple-maps.js
 
 ``` js

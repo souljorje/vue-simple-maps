@@ -1,0 +1,26 @@
+{
+  "name": "docs",
+  "version": "0.0.1",
+  "description": "Docs for vue-simple-maps plugin",
+  "main": "index.js",
+  "authors": {
+    "name": "Georgiy Bukharov",
+    "email": "souljorje@gmail.com"
+  },
+  "repository": "https://github.com/souljorje/vue-simple-maps/vue-simple-maps-docs",
+  "scripts": {
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@d3/projection-comparison": "https://api.observablehq.com/@d3/projection-comparison.tgz?v=3",
+    "@observablehq/runtime": "4",
+    "d3-array": "^2.9.1",
+    "d3-geo": "^2.0.1",
+    "d3-geo-projection": "^3.0.0",
+    "d3-scale": "^3.2.3",
+    "vuepress": "^1.7.1",
+    "vuepress-plugin-code-copy": "^1.0.6"
+  }
+}
