@@ -8,7 +8,7 @@ features:
   - title: Easy 👌
     details: Without diving deep to D3
   - title: Lightweight 📦
-    details: Only 3kb gzipped
+    details: ~36kb gzipped
   - title: Flexible 💪
     details: Add any SVG objects to map
 footer: MIT Licensed | Copyright © 2020-present Georgiy Bukharov

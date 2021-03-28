@@ -5,6 +5,7 @@
  */
 
 import VueSimpleMaps from 'vue-simple-maps';
+import 'vue-simple-maps/dist/vue-simple-maps.css';
 
 export default ({
   Vue, // the version of Vue being used in the VuePress app

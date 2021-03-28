@@ -6,33 +6,33 @@
 
 ## Features
 
-* Responsive out of the box
-* Customize map with any svg objects
-* Zoom and drag on all devices
-* Automatic transform lightweight TopoJSON to functional GeoJSON
+- Responsive out of the box
+- Customize map with any svg objects
+- Zoom and drag on all devices
+- Automatic transform lightweight TopoJSON to functional GeoJSON
 
 ## Installation
 
 npm
 
-``` bash
+```bash
 npm install vue-simple-maps
 ```
 
 yarn
 
-``` bash
+```bash
 yarn add vue-simple-maps
 ```
 
 CDN
 
-``` html
+```html
 <html>
   <head>
     <script src="https://cdn.jsdelivr.net/npm/vue@latest/dist/vue.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vue-simple-maps@latest/dist/vue-simple-maps.min.js"
-    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue-simple-maps@latest/dist/vue-simple-maps.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vue-simple-maps@latest/dist/vue-simple-maps.css"></script>
   </head>
 </html>
 ```
@@ -41,58 +41,55 @@ CDN
 
 1. Install vue plugin
 
-``` js
+```js
 import Vue from 'vue';
 import VueSimpleMaps from 'vue-simple-maps';
+import 'vue-simple-maps/dist/vue-simple-maps.css';
 Vue.use(VueSimpleMaps);
 ```
 
 Nuxt.js \
 Put previouse 👆 code into ~/plugins/vue-simple-maps.js
 
-``` js
+```js
 // nuxt.config.js
-plugins: ['~/plugins/vue-simple-maps.js']
+plugins: ['~/plugins/vue-simple-maps.js'];
 ```
 
-2. Create component\
+2. Create component
 
-``` html
+```html
 <template>
-  <Map
-    v-if="mapData"
-    :data="mapData"
-    :projection="projection"
-  >
+  <map v-if="mapData" :data="mapData" :projection="projection">
     <MapFeatures />
-  </Map>
+  </map>
 </template>
 
 <script>
-import { geoEqualEarth } from 'd3-geo';
+  import { geoEqualEarth } from 'd3-geo';
 
-export default {
-  data: () => ({
-    mapData: undefined,
-    projection: geoEqualEarth,
-  }),
-  mounted() {
-    // fetch topojson map
-    fetch('https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json')
-      .then((r) => r.json())
-      .then((d) => this.mapData = d);
-  },
-};
+  export default {
+    data: () => ({
+      mapData: undefined,
+      projection: geoEqualEarth,
+    }),
+    mounted() {
+      // fetch topojson map
+      fetch(
+        'https://raw.githubusercontent.com/deldersveld/topojson/master/world-countries.json'
+      )
+        .then((r) => r.json())
+        .then((d) => (this.mapData = d));
+    },
+  };
 </script>
 ```
-
 
 Viola
 
 <Demo componentName="examples-simple" />
 
 See more [examples](/examples) or learn [API](/api)
-
 
 ## License
 
