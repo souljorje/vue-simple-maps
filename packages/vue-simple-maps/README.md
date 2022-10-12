@@ -60,9 +60,9 @@ plugins: ['~/plugins/vue-simple-maps.js'];
 
 ```html
 <template>
-  <map v-if="mapData" :data="mapData" :projection="projection">
+  <Map v-if="mapData" :data="mapData" :projection="projection">
     <MapFeatures />
-  </map>
+  </Map>
 </template>
 
 <script>
