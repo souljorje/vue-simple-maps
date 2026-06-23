@@ -1,4 +1,6 @@
-# vue-simple-maps
+# Archived in favor of [d3-maps](https://github.com/souljorje/d3-maps), use it instead
+
+## vue-simple-maps
 
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/vue-simple-maps)
 
